@@ -3,6 +3,8 @@ import { Star } from "lucide-react";
 import { useApprovedTestimonials } from "@/hooks/useApprovedTestimonials";
 
 export function ProductReviews({ productName, bgClassName = "bg-background" }: { productName: string, bgClassName?: string }) {
+  const [page, setPage] = useState(0);
+  
   const { items, loading } = useApprovedTestimonials();
   
   if (loading) return null;
@@ -12,8 +14,6 @@ export function ProductReviews({ productName, bgClassName = "bg-background" }: {
   if (productReviews.length === 0) return null;
 
   const cardBg = bgClassName === "bg-white" ? "bg-background" : "bg-white";
-
-  const [page, setPage] = useState(0);
   const PAGE_SIZE = 3;
   const totalPages = Math.ceil(productReviews.length / PAGE_SIZE);
   const currentReviews = productReviews.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
