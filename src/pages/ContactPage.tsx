@@ -14,7 +14,7 @@ export function ContactPage() {
   const CONTACT_CARDS = [
     { icon: Phone,  label: "Phone",         lines: ["+94 76 430 4439", "+94 70 335 5548"], href: "tel:+94764304439" },
     { icon: Mail,   label: "Email",          lines: ["cre8den@gmail.com"],                  href: "mailto:cre8den@gmail.com" },
-    { icon: MapPin, label: "Location",       lines: ["Angunawala, Peradeniya,", "Sri Lanka"], href: "https://maps.app.goo.gl/RptdTkzMF7wEq8uj9?g_st=ic" },
+    { icon: MapPin, label: "Location",       lines: ["Angunawala, Peradeniya,", "Sri Lanka"], href: "https://maps.app.goo.gl/RdKp8PBNsR67DWkB8?g_st=ic" },
     { icon: Clock,  label: "Working Hours",  lines: ["Mon – Sat: 9 AM – 7 PM", "Sunday: 10 AM – 4 PM"] },
   ];
 
@@ -132,7 +132,7 @@ export function ContactPage() {
           <div className="flex flex-col rounded-2xl overflow-hidden border border-border min-h-[400px]">
             <div className="flex-1">
               <iframe title="Cre8Den Studio Location"
-                src="https://maps.google.com/maps?q=7.2408750,80.5936123&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=7.2408593,80.5936227&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="100%" style={{ border: 0, display: "block", minHeight: "340px" }}
                 allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </div>
