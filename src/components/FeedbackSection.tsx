@@ -81,7 +81,7 @@ export function FeedbackSection() {
           </div>
 
           {/* Right: form */}
-          <div className="bg-background border border-border rounded-2xl p-7">
+          <div className="bg-background border border-border rounded-2xl p-7 flex flex-col justify-center min-h-[400px]">
             {status === "done" ? (
               <div className="text-center py-6">
                 <div className="w-14 h-14 rounded-full bg-[#FFF0F1] flex items-center justify-center mx-auto mb-4">
