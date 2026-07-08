@@ -73,7 +73,7 @@ export function RobotChassisPage() {
         </div>
       </section>
 
-      <ProductReviews productName="Robot Chassis" />
+      <ProductReviews productName="Robot Chassis" bgClassName="bg-white" />
 
       {modal && (
         <OrderModal

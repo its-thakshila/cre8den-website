@@ -107,7 +107,7 @@ export function KeyTagPage({ config }: Props) {
         </div>
       </section>
 
-      <ProductReviews productName="Key Tags" />
+      <ProductReviews productName="Key Tags" bgClassName="bg-white" />
 
       {modal && (
         <OrderModal

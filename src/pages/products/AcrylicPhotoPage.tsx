@@ -120,7 +120,7 @@ export function AcrylicPhotoPage() {
         </div>
       </section>
 
-      <ProductReviews productName="Acrylic Engraved Photo" />
+      <ProductReviews productName="Acrylic Engraved Photo" bgClassName="bg-white" />
 
       {modal !== "closed" && (
         <OrderModal

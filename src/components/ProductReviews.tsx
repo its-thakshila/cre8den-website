@@ -1,7 +1,7 @@
 import { Star } from "lucide-react";
 import { useApprovedTestimonials } from "@/hooks/useApprovedTestimonials";
 
-export function ProductReviews({ productName }: { productName: string }) {
+export function ProductReviews({ productName, bgClassName = "bg-background" }: { productName: string, bgClassName?: string }) {
   const { items, loading } = useApprovedTestimonials();
   
   if (loading) return null;
@@ -11,7 +11,7 @@ export function ProductReviews({ productName }: { productName: string }) {
   if (productReviews.length === 0) return null;
 
   return (
-    <section className="bg-background border-t border-border">
+    <section className={`${bgClassName} border-t border-border`}>
       <div className="max-w-6xl mx-auto px-6 py-16">
         <div className="mb-10 text-center">
           <p className="text-xs font-medium tracking-widest text-primary uppercase mb-2">Customer Reviews</p>
