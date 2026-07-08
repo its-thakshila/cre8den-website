@@ -1,4 +1,4 @@
-﻿import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Zap, Star, Check } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
@@ -177,10 +177,37 @@ export function HomePage() {
           {subscribed ? (
             <div className="flex items-center justify-center gap-2 text-sm text-primary font-medium"><Check size={15} /> You're subscribed - thank you!</div>
           ) : (
-            <form onSubmit={(e) => { e.preventDefault(); if (email) { /* TODO: integrate with Google Sheet API */ setSubscribed(true); } }} className="flex flex-col sm:flex-row gap-2.5 max-w-sm mx-auto">
+            <form onSubmit={async (e) => { 
+              e.preventDefault(); 
+              
+              const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+              if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return;
+              }
+
+              if (email) {
+                try {
+                  const btn = (e.target as any).querySelector('button');
+                  if (btn) btn.disabled = true;
+                  
+                  await fetch(import.meta.env.VITE_SHEET_API_URL ?? "", {
+                    method: "POST",
+                    mode: "no-cors",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ action: "newsletter", email: email.trim() })
+                  });
+                  setSubscribed(true);
+                } catch {
+                  alert("Something went wrong. Please try again.");
+                  const btn = (e.target as any).querySelector('button');
+                  if (btn) btn.disabled = false;
+                }
+              } 
+            }} className="flex flex-col sm:flex-row gap-2.5 max-w-sm mx-auto">
               <input type="email" placeholder="your@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required
                 className="flex-1 bg-white border border-border rounded-md px-4 py-2.5 text-sm outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors placeholder:text-muted-foreground" />
-              <button type="submit" className="bg-primary text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-accent transition-colors whitespace-nowrap">Subscribe</button>
+              <button type="submit" className="bg-primary text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-accent transition-colors whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed">Subscribe</button>
             </form>
           )}
         </div>

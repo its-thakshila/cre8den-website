@@ -1,16 +1,26 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { Star, Mail, Shield, Check } from "lucide-react";
 
-const GOOGLE_FORM_ID      = import.meta.env.VITE_FEEDBACK_FORM_ID ?? "";
-const ENTRY_NAME          = import.meta.env.VITE_FEEDBACK_ENTRY_NAME ?? "entry.000000001";
-const ENTRY_RATING        = import.meta.env.VITE_FEEDBACK_ENTRY_RATING ?? "entry.000000002";
-const ENTRY_MESSAGE       = import.meta.env.VITE_FEEDBACK_ENTRY_MESSAGE ?? "entry.000000003";
-const STAR_LABELS         = ["", "Poor", "Fair", "Good", "Great", "Excellent"];
+const SHEET_API_URL = import.meta.env.VITE_SHEET_API_URL ?? "";
+const STAR_LABELS   = ["", "Poor", "Fair", "Good", "Great", "Excellent"];
+
+const PRODUCTS = [
+  "Whole Site / General",
+  "Acrylic Engraved Photo",
+  "Key Tags",
+  "Robot Chassis",
+  "Name Boards",
+  "Engraved Notebooks",
+  "Diaries & Journals",
+  "Wallets & Bags",
+  "Other"
+];
 
 export function FeedbackSection() {
   const [rating, setRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
   const [name, setName] = useState("");
+  const [product, setProduct] = useState(PRODUCTS[0]);
   const [message, setMessage] = useState("");
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
@@ -19,14 +29,21 @@ export function FeedbackSection() {
     if (!rating || !message.trim()) return;
     setStatus("sending");
     try {
-      const fd = new FormData();
-      fd.append(ENTRY_NAME,    name.trim() || "Anonymous");
-      fd.append(ENTRY_RATING,  `${rating} / 5 stars`);
-      fd.append(ENTRY_MESSAGE, message.trim());
-      await fetch(
-        `https://docs.google.com/forms/d/e/${GOOGLE_FORM_ID}/formResponse`,
-        { method: "POST", body: fd, mode: "no-cors" }
-      );
+      const payload = {
+        action: "feedback",
+        name: name.trim() || "Anonymous",
+        product: product,
+        rating: `${rating} / 5 stars`,
+        message: message.trim()
+      };
+
+      const res = await fetch(SHEET_API_URL, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      
       setStatus("done");
     } catch {
       setStatus("error");
@@ -100,10 +117,21 @@ export function FeedbackSection() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="text-xs font-semibold text-foreground uppercase tracking-wider block mb-1.5">Your Name <span className="text-muted-foreground font-normal normal-case">(optional)</span></label>
-                  <input type="text" placeholder="e.g. Kavindra P." value={name} onChange={(e) => setName(e.target.value)}
-                    className="w-full bg-white border border-border rounded-lg px-4 py-2.5 text-sm placeholder:text-muted-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                  <div>
+                    <label className="text-xs font-semibold text-foreground uppercase tracking-wider block mb-1.5">Your Name <span className="text-muted-foreground font-normal normal-case">(optional)</span></label>
+                    <input type="text" placeholder="e.g. Kavindra P." value={name} onChange={(e) => setName(e.target.value)}
+                      className="w-full bg-white border border-border rounded-lg px-4 py-2.5 text-sm placeholder:text-muted-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors" />
+                  </div>
+                  <div>
+                    <label className="text-xs font-semibold text-foreground uppercase tracking-wider block mb-1.5">Product <span className="text-muted-foreground font-normal normal-case">(optional)</span></label>
+                    <select value={product} onChange={(e) => setProduct(e.target.value)}
+                      className="w-full bg-white border border-border rounded-lg px-4 py-2.5 text-sm text-foreground outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-colors appearance-none">
+                      {PRODUCTS.map(p => (
+                        <option key={p} value={p}>{p}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
                 <div>
