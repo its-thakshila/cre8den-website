@@ -77,7 +77,7 @@ export function Footer() {
           </div>
         </div>
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[11px] text-white/30">
-          <p>© 2026 CRE8DEN. All rights reserved.</p>
+          <p>© 2026 Cre8Den. All rights reserved.</p>
           <p>Dream it big. We make it real.</p>
           <div className="flex gap-5">
             <button onClick={() => go("/privacy")} className="hover:text-white/60 transition-colors">Privacy</button>

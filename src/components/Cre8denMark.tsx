@@ -13,6 +13,6 @@ export function Cre8denMark({ size = "md", theme = "black", className }: Props) 
   const logo = theme === "white" ? logoWhite : logoBlack;
   
   return (
-    <img src={logo} alt="CRE8DEN Logo" className={`w-auto object-contain ${heightCls}`} />
+    <img src={logo} alt="Cre8Den Logo" className={`w-auto object-contain ${heightCls}`} />
   );
 }

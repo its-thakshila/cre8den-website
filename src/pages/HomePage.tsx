@@ -40,7 +40,7 @@ export function HomePage() {
               Dream It Big.{" "}<span className="font-semibold">We Make It <em className="not-italic text-primary">Real.</em></span>
             </h1>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-md mb-8">
-              CRE8DEN is a creative technology studio specializing in precision laser engraving, laser cutting, and custom fabrication. We transform ordinary objects into meaningful, personalized creations.
+              Cre8Den is a creative technology studio specializing in precision laser engraving, laser cutting, and custom fabrication. We transform ordinary objects into meaningful, personalized creations.
             </p>
             <div className="flex flex-wrap gap-3">
               <button onClick={() => go("/order")} className="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3 rounded-md hover:bg-accent transition-colors group">
@@ -95,7 +95,7 @@ export function HomePage() {
       <section className="bg-background border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-2xl overflow-hidden bg-[#F0EDE8] aspect-square max-w-md mx-auto lg:mx-0">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop&auto=format" alt="Acrylic engraved photo by CRE8DEN" className="w-full h-full object-cover" />
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop&auto=format" alt="Acrylic engraved photo by Cre8Den" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="inline-flex items-center gap-2 bg-[#FFF0F1] text-primary text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-5">

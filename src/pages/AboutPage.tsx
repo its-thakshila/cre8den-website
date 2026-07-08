@@ -1,4 +1,4 @@
-﻿import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { ArrowRight, Zap, Heart, Users, Star, Target, Eye } from "lucide-react";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
 import nodamicLogo from "@/assets/nodamic-logo.png";
@@ -30,7 +30,7 @@ export function AboutPage() {
             <p className="text-xs font-medium tracking-widest text-primary uppercase mb-3">Our Story</p>
             <h2 className="text-2xl lg:text-3xl font-semibold text-foreground mb-5 leading-snug" style={{ fontFamily: "'Outfit', sans-serif" }}>We believe every product tells a story.</h2>
             <div className="space-y-4 text-sm text-muted-foreground leading-relaxed">
-              <p>CRE8DEN was born from a simple conviction: that precision technology and human creativity can combine to produce something truly meaningful. Founded in Angunawala, Peradeniya, we started as a small laser studio serving local customers with personalized gifts and engravings.</p>
+              <p>Cre8Den was born from a simple conviction: that precision technology and human creativity can combine to produce something truly meaningful. Founded in Angunawala, Peradeniya, we started as a small laser studio serving local customers with personalized gifts and engravings.</p>
               <p>Today, we serve thousands of customers - from individuals looking for a heartfelt birthday gift, to engineering students building robotics prototypes, to corporations ordering bulk branded awards. Every piece carries the same commitment to quality and attention to detail.</p>
               <p>Our mission: <strong className="text-foreground font-medium">turn imagination into reality.</strong> Whether it's a single engraved keepsake or 500 laser-cut components, we treat every order as an opportunity to create something extraordinary.</p>
             </div>
@@ -40,7 +40,7 @@ export function AboutPage() {
           </div>
           <div className="relative">
             <div className="rounded-2xl overflow-hidden bg-[#F0EDE8] aspect-square">
-              <img src="https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format" alt="CRE8DEN laser-engraved gift box" className="w-full h-full object-cover" />
+              <img src="https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format" alt="Cre8Den laser-engraved gift box" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white border border-border rounded-xl px-5 py-4 shadow-md hidden lg:block">
               <p className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Outfit', sans-serif" }}>5,000+</p>
@@ -89,8 +89,8 @@ export function AboutPage() {
         <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
             <p className="text-xs font-medium tracking-widest text-primary uppercase mb-3">Part of a Bigger Family</p>
-            <h2 className="text-2xl lg:text-3xl font-semibold leading-snug mb-5" style={{ fontFamily: "'Outfit', sans-serif" }}>CRE8DEN is a proud member<br />of the Nodamic brand family.</h2>
-            <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-md">Nodamic is a forward-thinking technology and creative brand group based in Sri Lanka. As part of this family, CRE8DEN benefits from shared innovation, resources, and a commitment to excellence across every product we make.</p>
+            <h2 className="text-2xl lg:text-3xl font-semibold leading-snug mb-5" style={{ fontFamily: "'Outfit', sans-serif" }}>Cre8Den is a proud member<br />of the Nodamic brand family.</h2>
+            <p className="text-sm text-white/60 leading-relaxed mb-6 max-w-md">Nodamic is a forward-thinking technology and creative brand group based in Sri Lanka. As part of this family, Cre8Den benefits from shared innovation, resources, and a commitment to excellence across every product we make.</p>
           </div>
           <div className="flex items-center justify-center">
             <div className="bg-white/5 border border-white/10 rounded-2xl p-10 w-full max-w-xs flex flex-col items-center gap-4">

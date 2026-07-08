@@ -11,7 +11,7 @@ export function PrivacyPage() {
         </button>
         <h1 className="text-3xl font-semibold text-foreground mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>Privacy Policy</h1>
         <div className="prose prose-sm text-muted-foreground">
-          <p className="mb-4">At CRE8DEN, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
+          <p className="mb-4">At Cre8Den, we take your privacy seriously. This Privacy Policy explains how we collect, use, and protect your personal information when you use our website and services.</p>
           
           <h2 className="text-lg font-semibold text-foreground mt-8 mb-3">1. Information We Collect</h2>
           <p className="mb-4">We collect information that you provide directly to us, such as your name, email address, phone number, and any specific design requirements or files you share when placing a custom order via WhatsApp or our forms.</p>

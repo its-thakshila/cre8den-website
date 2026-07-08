@@ -131,20 +131,20 @@ export function ContactPage() {
 
           <div className="flex flex-col rounded-2xl overflow-hidden border border-border min-h-[400px]">
             <div className="flex-1">
-              <iframe title="CRE8DEN Studio Location"
+              <iframe title="Cre8Den Studio Location"
                 src="https://maps.google.com/maps?q=Angunawala,+Peradeniya,+Sri+Lanka&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%" height="100%" style={{ border: 0, display: "block", minHeight: "340px" }}
                 allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" />
             </div>
             <div className="bg-[#0F0C0C] px-5 py-4 flex items-center justify-between gap-4 flex-shrink-0">
               <div>
-                <p className="text-white text-sm font-semibold leading-snug">CRE8DEN Studio</p>
+                <p className="text-white text-sm font-semibold leading-snug">Cre8Den Studio</p>
                 <p className="text-white/50 text-xs mt-0.5">Angunawala, Peradeniya, Sri Lanka</p>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">
                 <a href="https://instagram.com/cre8den" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Instagram size={13} /> @cre8den</a>
                 <span className="text-white/20 text-xs">·</span>
-                <a href="https://www.facebook.com/share/14hj1i2Tcd3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> CRE8DEN</a>
+                <a href="https://www.facebook.com/share/14hj1i2Tcd3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> Cre8Den</a>
               </div>
             </div>
           </div>

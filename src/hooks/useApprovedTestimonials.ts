@@ -16,7 +16,7 @@ const SHEET_CSV_URL = import.meta.env.VITE_SHEET_CSV_URL ?? "";
 const FALLBACK_TESTIMONIALS: Testimonial[] = [
   { name: "Kavindra P.", stars: 5, text: "The keepsake box was absolutely stunning. The engraving precision was beyond what I expected for the price." },
   { name: "Malini S.",   stars: 5, text: "Ordered 50 acrylic awards for our corporate event. Every one was perfect and delivered ahead of schedule." },
-  { name: "Rajan M.",    stars: 5, text: "The wedding gift set had every guest asking about it. CRE8DEN made something truly one of a kind for us." },
+  { name: "Rajan M.",    stars: 5, text: "The wedding gift set had every guest asking about it. Cre8Den made something truly one of a kind for us." },
 ];
 
 function parseCSV(raw: string): string[][] {

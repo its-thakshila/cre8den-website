@@ -11,13 +11,13 @@ export function TermsPage() {
         </button>
         <h1 className="text-3xl font-semibold text-foreground mb-6" style={{ fontFamily: "'Outfit', sans-serif" }}>Terms of Service</h1>
         <div className="prose prose-sm text-muted-foreground">
-          <p className="mb-4">Welcome to CRE8DEN. By using our website and services, you agree to comply with and be bound by the following terms and conditions.</p>
+          <p className="mb-4">Welcome to Cre8Den. By using our website and services, you agree to comply with and be bound by the following terms and conditions.</p>
           
           <h2 className="text-lg font-semibold text-foreground mt-8 mb-3">1. Custom Orders</h2>
           <p className="mb-4">All custom orders are produced based on the specifications you provide. Please ensure that all design files, dimensions, and materials are accurate before confirming your order. Once an order is confirmed and production has started, it cannot be modified or cancelled.</p>
           
           <h2 className="text-lg font-semibold text-foreground mt-8 mb-3">2. Intellectual Property</h2>
-          <p className="mb-4">You must own or have permission to use any logos, artwork, or text you submit for engraving or cutting. CRE8DEN reserves the right to refuse orders that violate copyright or intellectual property laws.</p>
+          <p className="mb-4">You must own or have permission to use any logos, artwork, or text you submit for engraving or cutting. Cre8Den reserves the right to refuse orders that violate copyright or intellectual property laws.</p>
           
           <h2 className="text-lg font-semibold text-foreground mt-8 mb-3">3. Turnaround Times</h2>
           <p className="mb-4">While we strive to meet our standard timelines (3–5 working days) and express requests, these are estimates and may vary based on order complexity, material availability, and current workload.</p>
