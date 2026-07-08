@@ -1,7 +1,8 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ProductSlider } from "@/components/ProductSlider";
 import { OrderModal } from "@/components/OrderModal";
+import { ProductReviews } from "@/components/ProductReviews";
 import { NAME_BOARD_SIZES, NAME_BOARD_TYPES, NAME_BOARD_SLIDES } from "@/constants/products";
 
 export function NameBoardsPage() {
@@ -98,6 +99,8 @@ export function NameBoardsPage() {
           </div>
         </div>
       </section>
+
+      <ProductReviews productName="Name Boards" />
 
       {modal && (
         <OrderModal

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Check } from "lucide-react";
 import { ProductSlider } from "@/components/ProductSlider";
 import { OrderModal } from "@/components/OrderModal";
+import { ProductReviews } from "@/components/ProductReviews";
 import type { KeyTagConfig } from "@/types";
 
 interface Props { config: KeyTagConfig; }
@@ -105,6 +106,8 @@ export function KeyTagPage({ config }: Props) {
           </div>
         </div>
       </section>
+
+      <ProductReviews productName="Key Tags" />
 
       {modal && (
         <OrderModal

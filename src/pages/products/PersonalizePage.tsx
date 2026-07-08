@@ -1,8 +1,9 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { OrderModal } from "@/components/OrderModal";
 import { ProductSlider } from "@/components/ProductSlider";
+import { ProductReviews } from "@/components/ProductReviews";
 import { PERSONALIZE_ITEMS, PERSONALIZE_SLIDES } from "@/constants/products";
 
 export function PersonalizePage() {
@@ -56,6 +57,8 @@ export function PersonalizePage() {
           </div>
         </div>
       </section>
+
+      <ProductReviews productName={itemName} />
 
       {modal && (
         <OrderModal

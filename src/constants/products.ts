@@ -1,4 +1,4 @@
-﻿import { Zap, Gift, User, Scissors, Cpu, Leaf } from "lucide-react";
+import { Zap, Gift, User, Scissors, Cpu, Leaf } from "lucide-react";
 import type { KeyTagConfig } from "@/types";
 
 export const WA_NUMBER = "94764304439";
@@ -112,7 +112,7 @@ export const PERSONALIZE_SLIDES = [
 export const PERSONALIZE_ITEMS = [
   { id: "diaries",   name: "Diaries & Journals",  desc: "Make your personal reflections unique with custom-engraved premium covers tailored to your individual style.", img: "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&h=720&fit=crop&auto=format" },
   { id: "wallets",   name: "Wallets & Bags",       desc: "Add an exclusive touch of sophistication to your everyday leather accessories with custom laser-engraved names or emblems.", img: "https://images.unsplash.com/photo-1627123424574-724758594e93?w=900&h=720&fit=crop&auto=format" },
-  { id: "notebooks", name: "Note Books",           desc: "Stand out in meetings or class with a personalized note book featuring custom-etched texturing.", img: "https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?w=900&h=720&fit=crop&auto=format" },
+  { id: "notebooks", name: "Engraved Notebooks",       desc: "Stand out in meetings or class with a personalized note book featuring custom-etched texturing.", img: "https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?w=900&h=720&fit=crop&auto=format" },
   { id: "belts",     name: "Belts",                desc: "Make a distinct style statement with a personalized name or unique design precisely laser-engraved onto your leather belt.", img: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&h=720&fit=crop&auto=format" },
 ];
 

@@ -1,8 +1,9 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Check } from "lucide-react";
 import { ProductSlider } from "@/components/ProductSlider";
 import { OrderModal } from "@/components/OrderModal";
+import { ProductReviews } from "@/components/ProductReviews";
 import { ROBOT_SLIDES } from "@/constants/products";
 
 const HIGHLIGHTS = [
@@ -71,6 +72,8 @@ export function RobotChassisPage() {
           </div>
         </div>
       </section>
+
+      <ProductReviews productName="Robot Chassis" />
 
       {modal && (
         <OrderModal

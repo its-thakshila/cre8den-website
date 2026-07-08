@@ -1,8 +1,9 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Check, Zap } from "lucide-react";
 import { ProductSlider } from "@/components/ProductSlider";
 import { OrderModal } from "@/components/OrderModal";
+import { ProductReviews } from "@/components/ProductReviews";
 import { ACRYLIC_SLIDES, ACRYLIC_HIGHLIGHTS, ACRYLIC_PRICES } from "@/constants/products";
 
 export function AcrylicPhotoPage() {
@@ -118,6 +119,8 @@ export function AcrylicPhotoPage() {
           </div>
         </div>
       </section>
+
+      <ProductReviews productName="Acrylic Engraved Photo" />
 
       {modal !== "closed" && (
         <OrderModal
