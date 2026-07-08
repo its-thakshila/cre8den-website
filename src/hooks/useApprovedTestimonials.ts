@@ -8,8 +8,8 @@ import type { Testimonial } from "@/types";
 //   3. File → Share → Publish to web → Sheet1 → CSV → Publish
 //   4. Set VITE_SHEET_CSV_URL in .env.local
 //
-// Expected column order from your Google Form:
-//   0: Timestamp | 1: Name | 2: Rating | 3: Message | 4: Approved
+// Expected column order from Apps Script:
+//   0: Timestamp | 1: Name | 2: Product | 3: Rating | 4: Message | 5: Approved
 
 const SHEET_CSV_URL = import.meta.env.VITE_SHEET_CSV_URL ?? "";
 
@@ -45,11 +45,11 @@ export function useApprovedTestimonials() {
       const csv = await res.text();
       const rows = parseCSV(csv).slice(1);
       const approved = rows
-        .filter((cols) => cols[4]?.toLowerCase().trim() === "yes" && cols[3]?.trim())
+        .filter((cols) => cols[5]?.toLowerCase().trim() === "yes" && cols[4]?.trim())
         .map((cols) => ({
           name:  cols[1]?.trim() || "Anonymous",
-          stars: Math.min(5, Math.max(1, parseInt(cols[2]) || 5)),
-          text:  cols[3]?.trim(),
+          stars: Math.min(5, Math.max(1, parseInt(cols[3]) || 5)),
+          text:  cols[4]?.trim(),
         }));
       if (approved.length > 0) setItems(approved);
     } catch { /* silently use fallback */ }
