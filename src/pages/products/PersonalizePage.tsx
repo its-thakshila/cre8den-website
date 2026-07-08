@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { OrderModal } from "@/components/OrderModal";
 import { ProductSlider } from "@/components/ProductSlider";
 import { ProductReviews } from "@/components/ProductReviews";
+import { ShareButton } from "@/components/ShareButton";
 import { PERSONALIZE_ITEMS, PERSONALIZE_SLIDES } from "@/constants/products";
 
 export function PersonalizePage() {
@@ -33,9 +34,12 @@ export function PersonalizePage() {
   return (
     <main>
       <section className="bg-white border-b border-border">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center gap-2 text-xs text-muted-foreground">
-          <button onClick={() => { navigate("/services"); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="hover:text-primary transition-colors">Services</button>
-          <span>/</span><span className="text-foreground font-medium">Personalize {itemName}</span>
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="flex items-center gap-2 text-xs text-muted-foreground">
+            <button onClick={() => { navigate("/services"); window.scrollTo({ top: 0, behavior: "smooth" }); }} className="hover:text-primary transition-colors">Services</button>
+            <span>/</span><span className="text-foreground font-medium">Personalize {itemName}</span>
+          </div>
+          <ShareButton />
         </div>
       </section>
 
