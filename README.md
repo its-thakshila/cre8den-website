@@ -1,4 +1,4 @@
-# Cre8Den 🎨
+# Cre8Den
 
 Cre8Den is a modern, responsive web application for a creative technology studio specializing in precision laser engraving, laser cutting, and custom fabrication in Sri Lanka. 
 
@@ -8,7 +8,7 @@ The platform allows users to explore personalized gift options, request custom l
 
 ---
 
-## 🚀 Features
+## Features
 
 - **Dynamic Product Showcases**: High-quality UI for signature products like Acrylic Engraved Photos, Custom Key Tags, and Robot Chassis.
 - **WhatsApp Integration**: Automated, professional, bullet-point formatted WhatsApp messages generated directly from user selections.
@@ -16,7 +16,7 @@ The platform allows users to explore personalized gift options, request custom l
 - **Newsletter & Feedback Forms**: Direct integration with Google Apps Script to save customer inquiries and reviews securely to a Google Sheet.
 - **Mobile-First Design**: Fully responsive interface with custom viewport locking and zooming prevention for a native app-like mobile experience.
 
-## 🛠 Tech Stack
+## Tech Stack
 
 - **Framework**: [React](https://reactjs.org/) + [Vite](https://vitejs.dev/)
 - **Language**: TypeScript
@@ -27,7 +27,7 @@ The platform allows users to explore personalized gift options, request custom l
 
 ---
 
-## 💻 Local Development Setup
+## Local Development Setup
 
 ### 1. Prerequisites
 - [Node.js](https://nodejs.org/) (v16 or higher)
@@ -66,7 +66,7 @@ npm run build
 
 ---
 
-## 📝 License & Copyright
+## License & Copyright
 
 © 2026 Cre8Den. All rights reserved.
 Part of the Nodamic brand family.
