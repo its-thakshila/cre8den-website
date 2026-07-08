@@ -108,7 +108,7 @@ export function HomePage() {
                 <li key={item} className="flex items-center gap-2.5 text-sm text-foreground"><Check size={14} className="text-primary flex-shrink-0" />{item}</li>
               ))}
             </ul>
-            <button onClick={() => go("/order")} className="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3 rounded-md hover:bg-accent transition-colors group">
+            <button onClick={() => go("/gifts/acrylic-photo")} className="inline-flex items-center gap-2 bg-primary text-white text-sm font-medium px-6 py-3 rounded-md hover:bg-accent transition-colors group">
               Order Yours <ArrowRight size={14} className="group-hover:translate-x-0.5 transition-transform" />
             </button>
           </div>
