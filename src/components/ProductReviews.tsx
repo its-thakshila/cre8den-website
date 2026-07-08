@@ -10,6 +10,8 @@ export function ProductReviews({ productName, bgClassName = "bg-background" }: {
   
   if (productReviews.length === 0) return null;
 
+  const cardBg = bgClassName === "bg-white" ? "bg-background" : "bg-white";
+
   return (
     <section className={`${bgClassName} border-t border-border`}>
       <div className="max-w-6xl mx-auto px-6 py-16">
@@ -19,7 +21,7 @@ export function ProductReviews({ productName, bgClassName = "bg-background" }: {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productReviews.map((review, i) => (
-            <div key={i} className="bg-white border border-border rounded-2xl p-6 flex flex-col h-full">
+            <div key={i} className={`${cardBg} border border-border rounded-2xl p-6 flex flex-col h-full`}>
               <div className="flex gap-1 mb-4">
                 {Array(review.stars).fill(0).map((_, idx) => (
                   <Star key={idx} size={14} className="fill-primary text-primary" />
