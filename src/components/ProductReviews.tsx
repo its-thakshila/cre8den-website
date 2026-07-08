@@ -1,21 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Star } from "lucide-react";
 import { useApprovedTestimonials } from "@/hooks/useApprovedTestimonials";
 
 export function ProductReviews({ productName, bgClassName = "bg-background" }: { productName: string, bgClassName?: string }) {
   const [page, setPage] = useState(0);
+  const [timerKey, setTimerKey] = useState(0);
   
   const { items, loading } = useApprovedTestimonials();
+  const productReviews = items.filter(t => t.product === productName);
+  const PAGE_SIZE = 3;
+  const totalPages = Math.ceil(productReviews.length / PAGE_SIZE);
+
+  useEffect(() => {
+    if (loading || totalPages <= 1) return;
+    const id = setInterval(() => { setPage((p) => (p + 1) % totalPages); }, 5000);
+    return () => clearInterval(id);
+  }, [loading, totalPages, timerKey]);
   
   if (loading) return null;
-
-  const productReviews = items.filter(t => t.product === productName);
   
   if (productReviews.length === 0) return null;
 
   const cardBg = bgClassName === "bg-white" ? "bg-background" : "bg-white";
-  const PAGE_SIZE = 3;
-  const totalPages = Math.ceil(productReviews.length / PAGE_SIZE);
   const currentReviews = productReviews.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
 
   return (
@@ -44,7 +50,7 @@ export function ProductReviews({ productName, bgClassName = "bg-background" }: {
             {Array(totalPages).fill(0).map((_, i) => (
               <button 
                 key={i} 
-                onClick={() => setPage(i)}
+                onClick={() => { setPage(i); setTimerKey(k => k + 1); }}
                 aria-label={`Go to review page ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-200 ${i === page ? "bg-primary w-6" : "bg-border w-3.5 hover:bg-muted-foreground"}`} 
               />
