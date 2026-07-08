@@ -1,4 +1,4 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Phone, Mail, MapPin, Clock, Instagram, Facebook } from "lucide-react";
 import { FAQ_DATA } from "@/constants/products";
@@ -14,8 +14,8 @@ export function ContactPage() {
   const CONTACT_CARDS = [
     { icon: Phone,  label: "Phone",         lines: ["+94 76 430 4439", "+94 70 335 5548"], href: "tel:+94764304439" },
     { icon: Mail,   label: "Email",          lines: ["cre8den@gmail.com"],                  href: "mailto:cre8den@gmail.com" },
-    { icon: MapPin, label: "Location",       lines: ["Angunawala, Peradeniya,", "Sri Lanka"], href: "#" },
-    { icon: Clock,  label: "Working Hours",  lines: ["Mon – Sat: 9 AM – 7 PM", "Sunday: 10 AM – 4 PM"], href: "#" },
+    { icon: MapPin, label: "Location",       lines: ["Angunawala, Peradeniya,", "Sri Lanka"], href: "https://maps.google.com/maps?q=Angunawala,+Peradeniya,+Sri+Lanka" },
+    { icon: Clock,  label: "Working Hours",  lines: ["Mon – Sat: 9 AM – 7 PM", "Sunday: 10 AM – 4 PM"] },
   ];
 
   return (
@@ -30,7 +30,7 @@ export function ContactPage() {
       <section className="bg-background">
         <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CONTACT_CARDS.map(({ icon: Icon, label, lines, href }) => (
-            <a key={label} href={href} className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/20 transition-all group">
+            <a key={label} href={href} target={href?.startsWith("http") ? "_blank" : undefined} rel={href?.startsWith("http") ? "noopener noreferrer" : undefined} className="bg-white border border-border rounded-xl p-5 hover:shadow-md hover:border-primary/20 transition-all group block">
               <div className="w-10 h-10 rounded-lg bg-[#FFF0F1] flex items-center justify-center mb-4"><Icon size={18} className="text-primary" /></div>
               <p className="text-xs font-semibold text-foreground uppercase tracking-wider mb-2">{label}</p>
               {lines.map((l) => <p key={l} className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">{l}</p>)}
@@ -126,9 +126,9 @@ export function ContactPage() {
                 <p className="text-white/50 text-xs mt-0.5">Angunawala, Peradeniya, Sri Lanka</p>
               </div>
               <div className="flex items-center gap-4 flex-shrink-0">
-                <a href="#" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Instagram size={13} /> @cre8den</a>
+                <a href="https://instagram.com/cre8den" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Instagram size={13} /> @cre8den</a>
                 <span className="text-white/20 text-xs">·</span>
-                <a href="#" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> CRE8DEN</a>
+                <a href="https://facebook.com/cre8den" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> CRE8DEN</a>
               </div>
             </div>
           </div>

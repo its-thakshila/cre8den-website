@@ -29,8 +29,8 @@ export function Footer() {
               <ImageWithFallback src={nodamicLogo} alt="Nodamic" className="h-4 w-auto object-contain" style={{ filter: "brightness(0) invert(1)", opacity: 0.8 } as React.CSSProperties} />
             </div>
             <div className="flex gap-2.5">
-              <a href="#" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Instagram size={14} /></a>
-              <a href="#" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Facebook size={14} /></a>
+              <a href="https://instagram.com/cre8den" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Instagram size={14} /></a>
+              <a href="https://facebook.com/cre8den" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Facebook size={14} /></a>
             </div>
           </div>
           <div>
