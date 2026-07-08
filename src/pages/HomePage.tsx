@@ -129,21 +129,22 @@ export function HomePage() {
               </div>
             ) : (
               <div className="flex-1 flex flex-col justify-center mb-8">
-                <div className="flex gap-1 mb-5">
-                  {Array(TESTI[Math.min(activeTesti, TESTI.length - 1)].stars).fill(0).map((_, i) => (
-                    <Star key={i} size={15} className="fill-primary text-primary" />
-                  ))}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex gap-1">
+                    {Array(TESTI[Math.min(activeTesti, TESTI.length - 1)].stars).fill(0).map((_, i) => (
+                      <Star key={i} size={15} className="fill-primary text-primary" />
+                    ))}
+                  </div>
+                  {TESTI[Math.min(activeTesti, TESTI.length - 1)].product && 
+                   TESTI[Math.min(activeTesti, TESTI.length - 1)].product !== "Whole Site / General" && (
+                    <span className="text-[10px] font-medium uppercase tracking-wider text-primary bg-[#FFF0F1] px-2.5 py-1 rounded-md">
+                      {TESTI[Math.min(activeTesti, TESTI.length - 1)].product}
+                    </span>
+                  )}
                 </div>
                 <p className="text-base text-foreground leading-relaxed mb-6 italic">"{TESTI[Math.min(activeTesti, TESTI.length - 1)].text}"</p>
                 <div className="mt-auto">
                   <p className="text-sm font-semibold text-foreground">- {TESTI[Math.min(activeTesti, TESTI.length - 1)].name}</p>
-                  {TESTI[Math.min(activeTesti, TESTI.length - 1)].product && 
-                   TESTI[Math.min(activeTesti, TESTI.length - 1)].product !== "Whole Site / General" && (
-                    <p className="text-[11px] text-muted-foreground mt-0.5 ml-2.5 flex items-center gap-1.5">
-                      <span className="w-1 h-1 rounded-full bg-border" /> 
-                      {TESTI[Math.min(activeTesti, TESTI.length - 1)].product}
-                    </p>
-                  )}
                 </div>
               </div>
             )}
