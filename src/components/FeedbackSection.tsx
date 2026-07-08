@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Star, Mail, Shield, Check } from "lucide-react";
+import { Star, Shield, Check, MessageSquare } from "lucide-react";
 
 const SHEET_API_URL = import.meta.env.VITE_SHEET_API_URL ?? "";
 const STAR_LABELS   = ["", "Poor", "Fair", "Good", "Great", "Excellent"];
@@ -66,9 +66,9 @@ export function FeedbackSection() {
             </p>
             <div className="flex flex-col gap-4">
               {([
-                [Star,   "Excellent quality & fast delivery"],
-                [Mail,   "Helpful for improving our service"],
-                [Shield, "Responses saved securely"],
+                [MessageSquare, "Your voice shapes our future products"],
+                [Star,          "Helps us maintain high standards"],
+                [Shield,        "Feedback is kept strictly secure"],
               ] as const).map(([Icon, label]) => (
                 <div key={label} className="flex items-center gap-3 text-sm text-muted-foreground">
                   <div className="w-8 h-8 rounded-lg bg-[#FFF0F1] flex items-center justify-center flex-shrink-0">
