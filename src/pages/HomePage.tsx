@@ -129,22 +129,22 @@ export function HomePage() {
               </div>
             ) : (
               <div className="flex-1 flex flex-col justify-center mb-8">
-                <div className="flex items-center justify-between mb-5">
+                <div className="mb-5">
                   <div className="flex gap-1">
                     {Array(TESTI[Math.min(activeTesti, TESTI.length - 1)].stars).fill(0).map((_, i) => (
                       <Star key={i} size={15} className="fill-primary text-primary" />
                     ))}
                   </div>
+                </div>
+                <p className="text-base text-foreground leading-relaxed mb-6 italic">"{TESTI[Math.min(activeTesti, TESTI.length - 1)].text}"</p>
+                <div className="mt-auto flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                  <p className="text-sm font-semibold text-foreground">- {TESTI[Math.min(activeTesti, TESTI.length - 1)].name}</p>
                   {TESTI[Math.min(activeTesti, TESTI.length - 1)].product && 
                    TESTI[Math.min(activeTesti, TESTI.length - 1)].product !== "Whole Site / General" && (
-                    <span className="text-[10px] font-medium uppercase tracking-wider text-primary bg-[#FFF0F1] px-2.5 py-1 rounded-md">
+                    <span className="text-[10px] font-medium uppercase tracking-wider text-primary bg-[#FFF0F1] px-2.5 py-1 rounded-md w-fit">
                       {TESTI[Math.min(activeTesti, TESTI.length - 1)].product}
                     </span>
                   )}
-                </div>
-                <p className="text-base text-foreground leading-relaxed mb-6 italic">"{TESTI[Math.min(activeTesti, TESTI.length - 1)].text}"</p>
-                <div className="mt-auto">
-                  <p className="text-sm font-semibold text-foreground">- {TESTI[Math.min(activeTesti, TESTI.length - 1)].name}</p>
                 </div>
               </div>
             )}
