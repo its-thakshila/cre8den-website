@@ -18,6 +18,7 @@ export function AcrylicPhotoPage() {
   const unitPrice  = ACRYLIC_PRICES[priceKey];
   const totalPrice = unitPrice * qty;
 
+  function buildMsg(name: string, email: string) {
     return [
       `*${modal === "order" ? "NEW ORDER" : "CUSTOM ENQUIRY"}*`, "",
       `*Customer Details:*`,
@@ -33,6 +34,7 @@ export function AcrylicPhotoPage() {
         ? "_Our agent will contact you to collect the photo and any text to be engraved._"
         : "_Please share your specific requirements - our agent will guide you through the customisation._",
     ].filter(Boolean).join("\n").trim();
+  }
 
   return (
     <main>

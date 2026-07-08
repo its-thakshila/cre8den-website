@@ -22,6 +22,7 @@ export function PersonalizePage() {
     ...PERSONALIZE_SLIDES
   ];
 
+  function buildMsg(name: string, email: string) {
     return [
       `*NEW PERSONALIZATION ENQUIRY*`, "",
       `*Customer Details:*`,
@@ -30,6 +31,7 @@ export function PersonalizePage() {
       `• Item: ${itemName}`, "",
       "_Pricing depends on artwork and size. Our agent will provide a quote and guide you through the customisation process._",
     ].filter(Boolean).join("\n").trim();
+  }
 
   return (
     <main>

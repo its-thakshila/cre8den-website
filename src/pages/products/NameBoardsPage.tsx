@@ -17,6 +17,7 @@ export function NameBoardsPage() {
   const unitPrice    = selectedType.price;
   const totalPrice   = unitPrice * qty;
 
+  function buildMsg(name: string, email: string) {
     return [
       `*NEW NAME BOARDS ORDER*`, "",
       `*Customer Details:*`,
@@ -29,6 +30,7 @@ export function NameBoardsPage() {
       `• Subtotal: LKR ${totalPrice}`, "",
       "_Our agent will contact you to collect the text or design to be engraved on the name board._",
     ].filter(Boolean).join("\n").trim();
+  }
 
   return (
     <main>
