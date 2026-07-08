@@ -135,7 +135,16 @@ export function HomePage() {
                   ))}
                 </div>
                 <p className="text-base text-foreground leading-relaxed mb-6 italic">"{TESTI[Math.min(activeTesti, TESTI.length - 1)].text}"</p>
-                <p className="text-sm font-semibold text-muted-foreground mt-auto">- {TESTI[Math.min(activeTesti, TESTI.length - 1)].name}</p>
+                <div className="mt-auto">
+                  <p className="text-sm font-semibold text-foreground">- {TESTI[Math.min(activeTesti, TESTI.length - 1)].name}</p>
+                  {TESTI[Math.min(activeTesti, TESTI.length - 1)].product && 
+                   TESTI[Math.min(activeTesti, TESTI.length - 1)].product !== "Whole Site / General" && (
+                    <p className="text-[11px] text-muted-foreground mt-0.5 ml-2.5 flex items-center gap-1.5">
+                      <span className="w-1 h-1 rounded-full bg-border" /> 
+                      {TESTI[Math.min(activeTesti, TESTI.length - 1)].product}
+                    </p>
+                  )}
+                </div>
               </div>
             )}
             {!testiLoading && (

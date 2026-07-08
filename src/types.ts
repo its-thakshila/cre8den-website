@@ -9,6 +9,7 @@ export type GiftCat = "All" | "Acrylic" | "Wood" | "Key Tags" | "Notebooks" | "A
 
 export interface Testimonial {
   name: string;
+  product?: string;
   stars: number;
   text: string;
 }

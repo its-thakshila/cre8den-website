@@ -47,9 +47,10 @@ export function useApprovedTestimonials() {
       const approved = rows
         .filter((cols) => cols[5]?.toLowerCase().trim() === "yes" && cols[4]?.trim())
         .map((cols) => ({
-          name:  cols[1]?.trim() || "Anonymous",
-          stars: Math.min(5, Math.max(1, parseInt(cols[3]) || 5)),
-          text:  cols[4]?.trim(),
+          name:    cols[1]?.trim() || "Anonymous",
+          product: cols[2]?.trim(),
+          stars:   Math.min(5, Math.max(1, parseInt(cols[3]) || 5)),
+          text:    cols[4]?.trim(),
         }));
       if (approved.length > 0) setItems(approved);
     } catch { /* silently use fallback */ }
