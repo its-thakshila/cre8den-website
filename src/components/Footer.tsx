@@ -30,7 +30,7 @@ export function Footer() {
             </div>
             <div className="flex gap-2.5">
               <a href="https://instagram.com/cre8den" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Instagram size={14} /></a>
-              <a href="https://facebook.com/cre8den" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Facebook size={14} /></a>
+              <a href="https://www.facebook.com/share/14hj1i2Tcd3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="w-8 h-8 border border-white/10 rounded-lg flex items-center justify-center text-white/40 hover:text-white hover:border-white/30 transition-colors"><Facebook size={14} /></a>
             </div>
           </div>
           <div>

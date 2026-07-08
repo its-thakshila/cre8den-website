@@ -53,7 +53,15 @@ export function ContactPage() {
                 <p className="text-sm text-muted-foreground mb-5">Your message has been formatted. WhatsApp should open - just hit <strong className="text-foreground">Send</strong> to reach us directly.</p>
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <button onClick={() => {
-                    const msg = ["*New Enquiry - CRE8DEN*", "", form.subject ? `*Subject:* ${form.subject}` : "", `*Name:* ${form.name}`, `*Email:* ${form.email}`, form.phone ? `*Phone:* ${form.phone}` : "", "", "*Message:*", form.message].filter(Boolean).join("\n").trim();
+                    const msg = [
+                      "*NEW ENQUIRY*", "",
+                      "*Customer Details:*",
+                      `• Name: ${form.name}`, `• Email: ${form.email}`,
+                      form.phone ? `• Phone: ${form.phone}` : undefined, "",
+                      "*Message Details:*",
+                      form.subject ? `• Subject: ${form.subject}` : undefined, "",
+                      form.message
+                    ].filter(Boolean).join("\n").trim();
                     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
                   }} className="inline-flex items-center justify-center gap-2 bg-[#25D366] text-white text-sm font-semibold px-5 py-2.5 rounded-md hover:bg-[#1ebe5c] transition-colors">
                     Open WhatsApp
@@ -102,7 +110,15 @@ export function ContactPage() {
                 <button onClick={(e) => {
                   e.preventDefault();
                   if (form.name && form.email && form.message) {
-                    const msg = ["*New Enquiry - CRE8DEN*", "", form.subject ? `*Subject:* ${form.subject}` : "", `*Name:* ${form.name}`, `*Email:* ${form.email}`, form.phone ? `*Phone:* ${form.phone}` : "", "", "*Message:*", form.message].filter(Boolean).join("\n").trim();
+                    const msg = [
+                      "*NEW ENQUIRY*", "",
+                      "*Customer Details:*",
+                      `• Name: ${form.name}`, `• Email: ${form.email}`,
+                      form.phone ? `• Phone: ${form.phone}` : undefined, "",
+                      "*Message Details:*",
+                      form.subject ? `• Subject: ${form.subject}` : undefined, "",
+                      form.message
+                    ].filter(Boolean).join("\n").trim();
                     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`, "_blank");
                     setSent(true);
                   }
@@ -128,7 +144,7 @@ export function ContactPage() {
               <div className="flex items-center gap-4 flex-shrink-0">
                 <a href="https://instagram.com/cre8den" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Instagram size={13} /> @cre8den</a>
                 <span className="text-white/20 text-xs">·</span>
-                <a href="https://facebook.com/cre8den" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> CRE8DEN</a>
+                <a href="https://www.facebook.com/share/14hj1i2Tcd3/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-white/60 hover:text-white transition-colors text-xs"><Facebook size={13} /> CRE8DEN</a>
               </div>
             </div>
           </div>

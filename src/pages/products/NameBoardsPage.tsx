@@ -17,19 +17,18 @@ export function NameBoardsPage() {
   const unitPrice    = selectedType.price;
   const totalPrice   = unitPrice * qty;
 
-  function buildMsg(name: string, email: string) {
     return [
-      `*New Order - Name Boards*`, "",
-      `*Name:* ${name}`, `*Email:* ${email}`, "",
-      "*Order Details:*",
-      `*Size:* ${size}`,
-      `*Type:* ${selectedType.label}`,
-      `*Quantity:* ${qty}`,
-      `*Unit Price:* LKR ${unitPrice}`,
-      `*Total:* LKR ${totalPrice}`,
-      "", "_Our agent will contact you to collect the text or design to be engraved on the name board._",
-    ].join("\n");
-  }
+      `*NEW NAME BOARDS ORDER*`, "",
+      `*Customer Details:*`,
+      `• Name: ${name}`, `• Email: ${email}`, "",
+      `*Order Details:*`,
+      `• Size: ${size}`,
+      `• Type: ${selectedType.label}`,
+      `• Quantity: ${qty}`,
+      `• Unit Price: LKR ${unitPrice}`,
+      `• Subtotal: LKR ${totalPrice}`, "",
+      "_Our agent will contact you to collect the text or design to be engraved on the name board._",
+    ].filter(Boolean).join("\n").trim();
 
   return (
     <main>

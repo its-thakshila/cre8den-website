@@ -22,14 +22,14 @@ export function PersonalizePage() {
     ...PERSONALIZE_SLIDES
   ];
 
-  function buildMsg(name: string, email: string) {
     return [
-      `*Personalise Belongings Enquiry - CRE8DEN*`, "",
-      `*Name:* ${name}`, `*Email:* ${email}`,
-      `*Item Type:* ${itemName}`, "",
+      `*NEW PERSONALIZATION ENQUIRY*`, "",
+      `*Customer Details:*`,
+      `• Name: ${name}`, `• Email: ${email}`, "",
+      `*Order Details:*`,
+      `• Item: ${itemName}`, "",
       "_Pricing depends on artwork and size. Our agent will provide a quote and guide you through the customisation process._",
-    ].join("\n");
-  }
+    ].filter(Boolean).join("\n").trim();
 
   return (
     <main>

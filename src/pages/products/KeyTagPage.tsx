@@ -18,18 +18,18 @@ export function KeyTagPage({ config }: Props) {
   const unitPrice  = isDual ? 150 : 100;
   const totalPrice = unitPrice * qty;
 
-  function buildMsg(name: string, email: string) {
     return [
-      `*New Order - ${config.title}*`, "",
-      `*Name:* ${name}`, `*Email:* ${email}`, "",
-      "*Order Details:*",
-      `*Sides:* ${isDual ? "Double Sided" : "One Side"}`,
-      `*Quantity:* ${qty}`,
-      `*Unit Price:* LKR ${unitPrice}`,
-      `*Total:* LKR ${totalPrice}`,
-      "", "_Our agent will contact you to collect the design or text to be engraved._",
-    ].join("\n");
-  }
+      `*NEW KEY TAG ORDER*`, "",
+      `*Customer Details:*`,
+      `• Name: ${name}`, `• Email: ${email}`, "",
+      `*Order Details:*`,
+      `• Type: ${config.title}`,
+      `• Sides: ${isDual ? "Double Sided" : "One Side"}`,
+      `• Quantity: ${qty}`,
+      `• Unit Price: LKR ${unitPrice}`,
+      `• Subtotal: LKR ${totalPrice}`, "",
+      "_Our agent will contact you to collect the design or text to be engraved._",
+    ].filter(Boolean).join("\n").trim();
 
   return (
     <main>

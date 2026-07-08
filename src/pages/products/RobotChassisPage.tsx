@@ -21,10 +21,12 @@ export function RobotChassisPage() {
 
   function buildMsg(name: string, email: string) {
     return [
-      `*Robot Chassis Enquiry - CRE8DEN*`, "",
-      `*Name:* ${name}`, `*Email:* ${email}`,
-      projectDesc ? `\n*Project Description:*\n${projectDesc}` : "",
-      "", "_Pricing depends on the design and dimensions. Our agent will review your requirements and provide a quote._",
+      `*NEW ROBOT CHASSIS ENQUIRY*`, "",
+      `*Customer Details:*`,
+      `• Name: ${name}`, `• Email: ${email}`, "",
+      `*Project Description:*`,
+      projectDesc || "None provided", "",
+      "_Pricing depends on the design and dimensions. Our agent will review your requirements and provide a quote._",
     ].filter(Boolean).join("\n").trim();
   }
 

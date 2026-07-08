@@ -18,21 +18,21 @@ export function AcrylicPhotoPage() {
   const unitPrice  = ACRYLIC_PRICES[priceKey];
   const totalPrice = unitPrice * qty;
 
-  function buildMsg(name: string, email: string) {
     return [
-      `*${modal === "order" ? "New Order" : "Custom Enquiry"} - Acrylic Engraved Photo*`,
-      "", `*Name:* ${name}`, `*Email:* ${email}`, "",
-      "*Order Configuration:*",
-      `*Sides:* ${isDual ? "Double Sided" : "One Side"}`,
-      `*Packaging:* ${withBox ? "With Gift Box" : "Without Box"}`,
-      `*Quantity:* ${qty}`,
-      `*Unit Price:* LKR ${unitPrice.toLocaleString()}`,
-      `*Total:* LKR ${totalPrice.toLocaleString()}`,
-      "", modal === "order"
+      `*${modal === "order" ? "NEW ORDER" : "CUSTOM ENQUIRY"}*`, "",
+      `*Customer Details:*`,
+      `• Name: ${name}`, `• Email: ${email}`, "",
+      `*Order Details:*`,
+      `• Product: Acrylic Engraved Photo`,
+      `• Sides: ${isDual ? "Double Sided" : "One Side"}`,
+      `• Packaging: ${withBox ? "With Gift Box" : "Without Box"}`,
+      `• Quantity: ${qty}`,
+      `• Unit Price: LKR ${unitPrice.toLocaleString()}`,
+      `• Subtotal: LKR ${totalPrice.toLocaleString()}`, "",
+      modal === "order"
         ? "_Our agent will contact you to collect the photo and any text to be engraved._"
         : "_Please share your specific requirements - our agent will guide you through the customisation._",
-    ].join("\n");
-  }
+    ].filter(Boolean).join("\n").trim();
 
   return (
     <main>
