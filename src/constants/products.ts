@@ -13,8 +13,8 @@ export const SVC_OPTIONS = [
 ];
 
 export const MATERIALS_LIST = [
-  "Wood (oak, walnut, birch)", "MDF", "Plywood", "Acrylic (clear)", "Acrylic (frosted)",
-  "Acrylic (mirrored)", "Leather", "Cardboard", "Paper", "Metal", "Glass", "Other / Not sure",
+  "Acrylic (Black)", "Plywood (2mm, 3mm)", "MDF (2mm, 3mm)", 
+  "Leather", "Cardboard", "Paper", "Other / Not sure"
 ];
 
 export const QUANTITIES = ["1", "2–5", "6–10", "11–25", "26–50", "51–100", "100+"];
