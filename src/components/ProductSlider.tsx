@@ -46,7 +46,7 @@ export function ProductSlider({ slides = [], folderPath, fallbackAlt = "Product 
         </div>
       </div>
       {activeSlides.length > 1 && (
-        <div className="flex gap-2 mt-3 overflow-x-auto pb-2 snap-x">
+        <div className="flex gap-2 mt-3 overflow-x-auto pb-2 snap-x scrollbar-hide">
           {activeSlides.map((img, i) => (
             <button key={i} onClick={() => go(i)}
               className={`flex-none w-20 aspect-square rounded-lg overflow-hidden border-2 transition-colors snap-start ${i === slide ? "border-primary" : "border-transparent"}`}>
