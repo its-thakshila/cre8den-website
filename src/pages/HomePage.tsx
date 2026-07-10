@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Zap, Star, Check } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
+import { getFirstImageForFolder } from "@/lib/images";
 import { ServicesList } from "@/components/ServicesList";
 import { FeedbackSection } from "@/components/FeedbackSection";
 import { useApprovedTestimonials } from "@/hooks/useApprovedTestimonials";
@@ -31,7 +32,7 @@ export function HomePage() {
         <div className="max-w-6xl mx-auto px-6 py-14 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="relative order-2 lg:order-1">
             <div className="rounded-2xl overflow-hidden bg-[#F0EDE8] aspect-square max-w-md mx-auto lg:mx-0">
-              <img src="https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format" alt="Laser-engraved wooden keepsake box" className="w-full h-full object-cover" />
+              <img src={getFirstImageForFolder('/images/hero', 'https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format')} alt="Laser-engraved wooden keepsake box" className="w-full h-full object-cover" />
             </div>
           </div>
           <div className="order-1 lg:order-2">
@@ -95,7 +96,7 @@ export function HomePage() {
       <section className="bg-background border-t border-border">
         <div className="max-w-6xl mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="rounded-2xl overflow-hidden bg-[#F0EDE8] aspect-square max-w-md mx-auto lg:mx-0">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop&auto=format" alt="Acrylic engraved photo by Cre8Den" className="w-full h-full object-cover" />
+            <img src={getFirstImageForFolder('/images/gifts/acrylic-photo', 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=800&fit=crop&auto=format')} alt="Acrylic engraved photo by Cre8Den" className="w-full h-full object-cover" />
           </div>
           <div>
             <div className="inline-flex items-center gap-2 bg-[#FFF0F1] text-primary text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-5">
