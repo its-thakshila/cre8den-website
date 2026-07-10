@@ -44,7 +44,7 @@ export function AboutPage() {
               <img src={getFirstImageForFolder('/images/about', 'https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format')} alt="Cre8Den laser-engraved gift box" className="w-full h-full object-cover" />
             </div>
             <div className="absolute -bottom-4 -right-4 bg-white border border-border rounded-xl px-5 py-4 shadow-md hidden lg:block">
-              <p className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Outfit', sans-serif" }}>5,000+</p>
+              <p className="text-2xl font-bold text-foreground" style={{ fontFamily: "'Outfit', sans-serif" }}>500+</p>
               <p className="text-xs text-muted-foreground">Orders completed</p>
             </div>
           </div>

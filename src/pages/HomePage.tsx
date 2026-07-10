@@ -52,7 +52,7 @@ export function HomePage() {
               </button>
             </div>
             <div className="mt-10 pt-8 border-t border-border flex gap-8">
-              {[["5,000+", "Orders completed"], ["60+", "Materials"], ["4.9 ★", "Customer rating"]].map(([n, l]) => (
+              {[["500+", "Orders completed"], ["10+", "Materials"], ["4.9 ★", "Customer rating"]].map(([n, l]) => (
                 <div key={l}><p className="text-lg font-semibold text-foreground" style={{ fontFamily: "'Outfit', sans-serif" }}>{n}</p><p className="text-xs text-muted-foreground mt-0.5">{l}</p></div>
               ))}
             </div>
