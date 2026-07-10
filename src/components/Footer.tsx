@@ -21,8 +21,16 @@ export function Footer() {
       <div className="max-w-6xl mx-auto px-6 pt-14 pb-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           <div className="sm:col-span-2 lg:col-span-1">
-            <Cre8denMark className="h-5" theme="white" />
-            <p className="text-[10px] text-white/30 uppercase tracking-widest mt-1 mb-4">Where Imagination Becomes Reality</p>
+            <div className="flex flex-col items-start w-fit mb-4">
+              <Cre8denMark className="h-5" theme="white" />
+              <div className="w-0 min-w-full flex justify-center mt-[3px]">
+                <svg viewBox="0 0 250 12" className="w-[98%] h-auto text-white/30" preserveAspectRatio="none">
+                  <text x="0" y="10" fontSize="10.5" fill="currentColor" fontWeight="500" letterSpacing="0.04em" textLength="250" lengthAdjust="spacing" style={{ fontFamily: "'Outfit', sans-serif", textTransform: "uppercase" }}>
+                    Where Imagination Becomes Reality
+                  </text>
+                </svg>
+              </div>
+            </div>
             <p className="text-sm text-white/50 leading-relaxed mb-6 max-w-xs">A creative technology studio for precision laser engraving, cutting, and custom fabrication. Based in Peradeniya, Sri Lanka.</p>
             <div className="flex items-center gap-2.5 mb-5">
               <span className="text-[10px] text-white/30 uppercase tracking-wider">Part of</span>
