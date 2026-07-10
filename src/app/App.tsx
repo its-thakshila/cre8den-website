@@ -1,5 +1,8 @@
 import { useEffect } from "react";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
+import ReactGA from "react-ga4";
+
+ReactGA.initialize("G-1ZVHK73DRF");
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
@@ -21,10 +24,11 @@ import { RobotChassisPage }   from "@/pages/products/RobotChassisPage";
 import { ACRYLIC_KEYTAG_CONFIG, WOODEN_KEYTAG_CONFIG } from "@/constants/products";
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
+  const { pathname, search } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+    ReactGA.send({ hitType: "pageview", page: pathname + search });
+  }, [pathname, search]);
   return null;
 }
 

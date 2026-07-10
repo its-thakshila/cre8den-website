@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
+import ReactGA from "react-ga4";
 import { WA_NUMBER } from "@/constants/products";
 
 interface OrderRow { label: string; value: string; isBold?: boolean; }
@@ -23,6 +24,7 @@ export function OrderModal({ title, subtitle, orderRows, onClose, buildWhatsAppM
   }
 
   function sendWhatsApp() {
+    ReactGA.event({ category: "Lead", action: "WhatsApp Open", label: subtitle || title });
     window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(buildWhatsAppMsg(name, email))}`, "_blank");
   }
 

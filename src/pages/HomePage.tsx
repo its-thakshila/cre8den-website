@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRight, Zap, Star, Check } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import { getFirstImageForFolder } from "@/lib/images";
+import ReactGA from "react-ga4";
 import { ServicesList } from "@/components/ServicesList";
 import { FeedbackSection } from "@/components/FeedbackSection";
 import { useApprovedTestimonials } from "@/hooks/useApprovedTestimonials";
@@ -209,6 +210,7 @@ export function HomePage() {
                     body: JSON.stringify({ action: "newsletter", email: email.trim() })
                   });
                   setSubscribed(true);
+                  ReactGA.event({ category: "Lead", action: "Newsletter Subscribe", label: "Home Page" });
                 } catch {
                   alert("Something went wrong. Please try again.");
                   const btn = (e.target as any).querySelector('button');

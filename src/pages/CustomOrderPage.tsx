@@ -1,6 +1,7 @@
-﻿import { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Check, Upload } from "lucide-react";
+import ReactGA from "react-ga4";
 import { openOrderWhatsApp } from "@/lib/whatsapp";
 import { SVC_OPTIONS, MATERIALS_LIST, QUANTITIES, TIMELINES } from "@/constants/products";
 import type { OrderStep } from "@/types";
@@ -93,7 +94,7 @@ export function CustomOrderPage() {
             })}
           </div>
 
-          <form onSubmit={(e) => { e.preventDefault(); if (canProceed()) { openOrderWhatsApp(form); setSubmitted(true); } }}>
+          <form onSubmit={(e) => { e.preventDefault(); if (canProceed()) { ReactGA.event({ category: "Lead", action: "Custom Order Submit", label: form.service }); openOrderWhatsApp(form); setSubmitted(true); } }}>
             {step === 1 && (
               <div>
                 <h2 className="text-lg font-semibold text-foreground mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>What service do you need?</h2>
