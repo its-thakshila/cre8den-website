@@ -31,7 +31,7 @@ export function HomePage() {
       <section className="bg-white">
         <div className="max-w-6xl mx-auto px-6 py-14 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div className="relative order-2 lg:order-1">
-            <div className="rounded-2xl overflow-hidden bg-[#F0EDE8] aspect-square max-w-md mx-auto lg:mx-0">
+            <div className="rounded-2xl overflow-hidden bg-white aspect-square max-w-md mx-auto lg:mx-0">
               <img src={getFirstImageForFolder('/images/hero', 'https://images.unsplash.com/photo-1736967225486-d3c9298b8a5e?w=800&h=800&fit=crop&auto=format')} alt="Laser-engraved wooden keepsake box" className="w-full h-full object-cover" />
             </div>
           </div>
