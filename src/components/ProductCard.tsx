@@ -34,7 +34,7 @@ export function ProductCard({ gift }: Props) {
         )}
       </div>
       <div className="p-4 flex flex-col flex-1">
-        <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-1.5">{gift.material}</p>
+
         <p className="text-sm font-semibold text-foreground leading-snug mb-1.5" style={{ fontFamily: "'Outfit', sans-serif" }}>{gift.name}</p>
         <p className="text-xs text-muted-foreground leading-relaxed flex-1 mb-3">{gift.desc}</p>
         <div className="flex items-center justify-between">
