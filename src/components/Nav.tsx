@@ -38,9 +38,13 @@ export function Nav() {
       </div>
       <header className="sticky top-0 z-50 bg-white border-b border-border">
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6">
-          <button onClick={() => go("/")} className="flex items-center gap-2.5 flex-shrink-0">
+          <button onClick={() => go("/")} className="flex flex-col items-center flex-shrink-0 text-muted-foreground hover:text-primary transition-colors">
             <Cre8denMark className="h-6" />
-            <span className="hidden sm:block text-[10px] text-left text-muted-foreground leading-tight mt-0.5 max-w-[110px]">Where Imagination Becomes Reality</span>
+            <svg viewBox="0 0 250 12" className="w-[94%] h-auto mt-[3px]" preserveAspectRatio="none">
+              <text x="0" y="10" fontSize="10.5" fill="currentColor" fontWeight="500" letterSpacing="0.04em" textLength="250" lengthAdjust="spacing" style={{ fontFamily: "'Outfit', sans-serif", textTransform: "uppercase" }}>
+                Where Imagination Becomes Reality
+              </text>
+            </svg>
           </button>
           <nav className="hidden lg:flex items-center gap-7">
             {NAV_LINKS.map(({ label, to }) => {

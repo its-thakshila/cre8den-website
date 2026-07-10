@@ -35,7 +35,7 @@ export function HomePage() {
             </div>
           </div>
           <div className="order-1 lg:order-2">
-            <p className="text-xs font-medium tracking-widest text-primary uppercase mb-5">Where Imagination Becomes Reality</p>
+            <p className="text-xs font-medium tracking-widest text-primary uppercase mb-5">Premium Custom Gifts & Engraving</p>
             <h1 className="text-4xl lg:text-5xl font-light text-foreground leading-tight mb-4" style={{ fontFamily: "'Outfit', sans-serif" }}>
               Dream It Big.{" "}<span className="font-semibold">We Make It <em className="not-italic text-primary">Real.</em></span>
             </h1>
