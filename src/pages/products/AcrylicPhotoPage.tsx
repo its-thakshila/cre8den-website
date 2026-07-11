@@ -52,8 +52,13 @@ export function AcrylicPhotoPage() {
         <div className="max-w-6xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <ProductSlider slides={ACRYLIC_SLIDES} />
           <div>
-            <div className="inline-flex items-center gap-2 bg-[#FFF0F1] text-primary text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full mb-4">
-              <Zap size={10} /> Signature Product
+            <div className="flex flex-wrap items-center gap-2 mb-4">
+              <div className="inline-flex items-center gap-2 bg-[#FFF0F1] text-primary text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full">
+                <Zap size={10} /> Signature Product
+              </div>
+              <div className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full">
+                Size: 85mm × 85mm
+              </div>
             </div>
             <h1 className="text-2xl lg:text-3xl font-semibold text-foreground leading-snug mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>Acrylic Engraved Photo</h1>
             <p className="text-sm text-muted-foreground mb-1">The Ultimate Custom Keepsake</p>
