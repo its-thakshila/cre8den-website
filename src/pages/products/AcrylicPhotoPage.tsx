@@ -14,8 +14,8 @@ export function AcrylicPhotoPage() {
   const [modal, setModal] = useState<"closed" | "order" | "enquiry">("closed");
   const navigate = useNavigate();
 
-  const priceKey   = `${isDual ? "dual" : "single"}-${withBox ? "box" : "nobox"}`;
-  const unitPrice  = ACRYLIC_PRICES[priceKey];
+  const priceKey = `${isDual ? "dual" : "single"}-${withBox ? "box" : "nobox"}`;
+  const unitPrice = ACRYLIC_PRICES[priceKey];
   const totalPrice = unitPrice * qty;
 
   function buildMsg(name: string, email: string) {
@@ -61,7 +61,7 @@ export function AcrylicPhotoPage() {
               </div>
             </div>
             <h1 className="text-2xl lg:text-3xl font-semibold text-foreground leading-snug mb-1" style={{ fontFamily: "'Outfit', sans-serif" }}>Acrylic Engraved Photo</h1>
-            <p className="text-sm text-muted-foreground mb-1">The Ultimate Custom Keepsake</p>
+            <p className="text-sm text-muted-foreground mb-1">The Ultimate Custom Keepsake (with Stand)</p>
             <div className="flex items-baseline gap-2 my-4">
               <span className="text-2xl font-bold text-primary" style={{ fontFamily: "'Outfit', sans-serif" }}>LKR {unitPrice.toLocaleString()}</span>
               <span className="text-xs text-muted-foreground">per piece</span>

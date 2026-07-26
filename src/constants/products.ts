@@ -5,28 +5,28 @@ import { getImagesForFolder, getFirstImageForFolder } from "@/lib/images";
 export const WA_NUMBER = "94764304439";
 
 export const SVC_OPTIONS = [
-  { icon: Zap,      label: "Laser Engraving",           desc: "Engrave names, logos, or artwork on any material" },
-  { icon: Gift,     label: "Personalized Gift",          desc: "Customize a gift for any special occasion" },
-  { icon: User,     label: "Personal Customization",     desc: "Personalize your own items & belongings" },
-  { icon: Scissors, label: "Laser Cutting",              desc: "Precision cuts for prototypes, signage & décor" },
-  { icon: Cpu,      label: "Robot Chassis",              desc: "Custom chassis for engineers & students" },
+  { icon: Zap, label: "Laser Engraving", desc: "Engrave names, logos, or artwork on any material" },
+  { icon: Gift, label: "Personalized Gift", desc: "Customize a gift for any special occasion" },
+  { icon: User, label: "Personal Customization", desc: "Personalize your own items & belongings" },
+  { icon: Scissors, label: "Laser Cutting", desc: "Precision cuts for prototypes, signage & décor" },
+  { icon: Cpu, label: "Robot Chassis", desc: "Custom chassis for engineers & students" },
 ];
 
 export const MATERIALS_LIST = [
-  "Acrylic (Black)", "Plywood (2mm, 3mm)", "MDF (2mm, 3mm)", 
+  "Acrylic (Black)", "Plywood (2mm, 3mm)", "MDF (2mm, 3mm)",
   "Leather", "Cardboard", "Paper", "Other / Not sure"
 ];
 
 export const QUANTITIES = ["1", "2–5", "6–10", "11–25", "26–50", "51–100", "100+"];
-export const TIMELINES  = ["Standard (3–5 working days)", "Rush (1–2 working days)", "I'm flexible"];
+export const TIMELINES = ["Standard (3–5 working days)", "Rush (1–2 working days)", "I'm flexible"];
 
 export const FAQ_DATA = [
-  { q: "How long does an order take?",          a: "Standard orders are completed in 3–5 working days. Rush orders (1–2 days) are available on request." },
-  { q: "Can I bring my own item to engrave?",   a: "Absolutely. You can bring any compatible item to our studio. Contact us first to confirm the material is compatible." },
-  { q: "What file formats do you accept?",      a: "We accept AI, SVG, PDF, DXF, PNG, and JPG. For best results, provide vector files (AI, SVG, or DXF)." },
+  { q: "How long does an order take?", a: "Standard orders are completed in 3–5 working days. Rush orders (1–2 days) are available on request." },
+  { q: "Can I bring my own item to engrave?", a: "Absolutely. You can bring any compatible item to our studio. Contact us first to confirm the material is compatible." },
+  { q: "What file formats do you accept?", a: "We accept AI, SVG, PDF, DXF, PNG, and JPG. For best results, provide vector files (AI, SVG, or DXF)." },
   { q: "Do you offer bulk / corporate orders?", a: "Yes! We offer discounts and dedicated support for bulk orders of 10+ pieces. Contact us for a custom quote." },
-  { q: "Is a deposit required?",                a: "For custom orders, we typically require 50% upfront before production begins. Full payment on delivery." },
-  { q: "Do you ship islandwide?",               a: "Yes. We ship across Sri Lanka via courier. For Peradeniya and nearby areas, in-person pickup is also available." },
+  { q: "Is a deposit required?", a: "For custom orders, we typically require 50% upfront before production begins. Full payment on delivery." },
+  { q: "Do you ship islandwide?", a: "Yes. We ship across Sri Lanka via courier. For Peradeniya and nearby areas, in-person pickup is also available." },
 ];
 
 // ─── Key Tag product configs ───────────────────────────────────────────────────
@@ -93,16 +93,16 @@ export const ACRYLIC_HIGHLIGHTS = [
 
 export const ACRYLIC_PRICES: Record<string, number> = {
   "single-nobox": 900,
-  "dual-nobox":   1000,
-  "single-box":   1400,
-  "dual-box":     1500,
+  "dual-nobox": 1000,
+  "single-box": 1200,
+  "dual-box": 1300,
 };
 
 // ─── Name Boards constants ─────────────────────────────────────────────────────
-export const NAME_BOARD_SIZES  = ["10 × 4 inch"];
-export const NAME_BOARD_TYPES  = [
-  { id: "stencil", label: "Black Acrylic + White Stencil Painting", price: 800  },
-  { id: "letters", label: "Black Acrylic + White Acrylic Letters",  price: 1200 },
+export const NAME_BOARD_SIZES = ["10 × 4 inch"];
+export const NAME_BOARD_TYPES = [
+  { id: "stencil", label: "Black Acrylic + White Stencil Painting", price: 800 },
+  { id: "letters", label: "Black Acrylic + White Acrylic Letters", price: 1200 },
 ];
 export const NAME_BOARD_SLIDES = (() => {
   const local = getImagesForFolder('/images/laser/name-boards');
@@ -135,9 +135,9 @@ export const PERSONALIZE_SLIDES = (() => {
 })();
 
 export const PERSONALIZE_ITEMS = [
-  { id: "diaries",   name: "Diaries & Journals",  desc: "Make your personal reflections unique with custom-engraved premium covers tailored to your individual style.", img: getFirstImageForFolder('/images/gifts/notebooks', "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&h=720&fit=crop&auto=format") },
-  { id: "wallets",   name: "Wallets & Bags",       desc: "Add an exclusive touch of sophistication to your everyday leather accessories with custom laser-engraved names or emblems.", img: getFirstImageForFolder('/images/personalize/wallets', "https://images.unsplash.com/photo-1627123424574-724758594e93?w=900&h=720&fit=crop&auto=format") },
-  { id: "notebooks", name: "Engraved Notebooks",       desc: "Stand out in meetings or class with a personalized note book featuring custom-etched texturing.", img: getFirstImageForFolder('/images/gifts/notebooks', "https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?w=900&h=720&fit=crop&auto=format") },
-  { id: "belts",     name: "Belts",                desc: "Make a distinct style statement with a personalized name or unique design precisely laser-engraved onto your leather belt.", img: getFirstImageForFolder('/images/personalize/belts', "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&h=720&fit=crop&auto=format") },
+  { id: "diaries", name: "Diaries & Journals", desc: "Make your personal reflections unique with custom-engraved premium covers tailored to your individual style.", img: getFirstImageForFolder('/images/gifts/notebooks', "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=900&h=720&fit=crop&auto=format") },
+  { id: "wallets", name: "Wallets & Bags", desc: "Add an exclusive touch of sophistication to your everyday leather accessories with custom laser-engraved names or emblems.", img: getFirstImageForFolder('/images/personalize/wallets', "https://images.unsplash.com/photo-1627123424574-724758594e93?w=900&h=720&fit=crop&auto=format") },
+  { id: "notebooks", name: "Engraved Notebooks", desc: "Stand out in meetings or class with a personalized note book featuring custom-etched texturing.", img: getFirstImageForFolder('/images/gifts/notebooks', "https://images.unsplash.com/photo-1531346680769-a1d79b57de5c?w=900&h=720&fit=crop&auto=format") },
+  { id: "belts", name: "Belts", desc: "Make a distinct style statement with a personalized name or unique design precisely laser-engraved onto your leather belt.", img: getFirstImageForFolder('/images/personalize/belts', "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=900&h=720&fit=crop&auto=format") },
 ];
 
