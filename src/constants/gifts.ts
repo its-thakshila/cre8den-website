@@ -2,7 +2,7 @@ export const GIFTS_DATA = [
   { id: 1, cat: "Acrylic",    comingSoon: false, tag: "Signature", detailPage: "/gifts/acrylic-photo",
     folder: "/images/gifts/acrylic-photo", name: "Acrylic Engraved Photo",
     desc: "Preserve your cherished memories forever with a beautifully detailed, crystal-clear acrylic laser engraving.",
-    material: "Premium clear acrylic", price: "LKR 900 – 1,200",
+    material: "Premium clear acrylic", price: "LKR 950 – 1,200",
     img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=680&fit=crop&auto=format" },
   { id: 2, cat: "Notebooks",  comingSoon: true, tag: "Coming Soon",
     folder: "/images/gifts/notebooks", name: "Engraved Notebooks",

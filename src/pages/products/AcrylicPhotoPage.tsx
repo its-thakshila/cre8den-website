@@ -9,12 +9,11 @@ import { ACRYLIC_SLIDES, ACRYLIC_HIGHLIGHTS, ACRYLIC_PRICES } from "@/constants/
 
 export function AcrylicPhotoPage() {
   const [isDual, setIsDual] = useState(false);
-  const [withBox, setWithBox] = useState(false);
   const [qty, setQty] = useState(1);
   const [modal, setModal] = useState<"closed" | "order" | "enquiry">("closed");
   const navigate = useNavigate();
 
-  const priceKey = `${isDual ? "dual" : "single"}-${withBox ? "box" : "nobox"}`;
+  const priceKey = isDual ? "dual" : "single";
   const unitPrice = ACRYLIC_PRICES[priceKey];
   const totalPrice = unitPrice * qty;
 
@@ -26,7 +25,6 @@ export function AcrylicPhotoPage() {
       `*Order Details:*`,
       `• Product: Acrylic Engraved Photo`,
       `• Sides: ${isDual ? "Double Sided" : "One Side"}`,
-      `• Packaging: ${withBox ? "With Gift Box" : "Without Box"}`,
       `• Quantity: ${qty}`,
       `• Unit Price: LKR ${unitPrice.toLocaleString()}`,
       `• Subtotal: LKR ${totalPrice.toLocaleString()}`, "",
@@ -78,15 +76,7 @@ export function AcrylicPhotoPage() {
                   <span className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform duration-200 ${isDual ? "translate-x-5" : "translate-x-0"}`} />
                 </button>
               </div>
-              <div className="flex items-center justify-between">
-                <div>
-                  <p className="text-sm font-semibold text-foreground">Include Gift Box</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">Presented in a premium gift-ready box</p>
-                </div>
-                <button onClick={() => setWithBox(!withBox)} className={`relative w-11 h-6 rounded-full transition-colors duration-200 flex-shrink-0 ${withBox ? "bg-primary" : "bg-border"}`}>
-                  <span className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full shadow transition-transform duration-200 ${withBox ? "translate-x-5" : "translate-x-0"}`} />
-                </button>
-              </div>
+
               <div className="flex items-center justify-between">
                 <div><p className="text-sm font-semibold text-foreground">Quantity</p><p className="text-xs text-muted-foreground mt-0.5">Minimum order: 1 piece</p></div>
                 <div className="flex items-center gap-3 border border-border rounded-lg px-1">
@@ -98,7 +88,7 @@ export function AcrylicPhotoPage() {
             </div>
             <div className="bg-background border border-border rounded-xl p-4 mb-6 text-sm">
               <div className="flex justify-between text-muted-foreground mb-1.5">
-                <span>{isDual ? "Double sided" : "One side"} · {withBox ? "with gift box" : "no box"}</span>
+                <span>{isDual ? "Double sided" : "One side"}</span>
                 <span>LKR {unitPrice.toLocaleString()} × {qty}</span>
               </div>
               <div className="flex justify-between font-semibold text-foreground text-base pt-1.5 border-t border-border">
@@ -138,7 +128,7 @@ export function AcrylicPhotoPage() {
           title={modal === "order" ? "Place Your Order" : "Ask / Customise"}
           subtitle="Acrylic Engraved Photo"
           orderRows={[
-            { label: "Configuration", value: `${isDual ? "Double Sided" : "One Side"} · ${withBox ? "With Box" : "No Box"}` },
+            { label: "Configuration", value: isDual ? "Double Sided" : "One Side" },
             { label: "Quantity", value: qty.toString() },
             { label: "Total", value: `LKR ${totalPrice.toLocaleString()}`, isBold: true },
           ]}

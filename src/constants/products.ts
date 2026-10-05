@@ -92,10 +92,8 @@ export const ACRYLIC_HIGHLIGHTS = [
 ];
 
 export const ACRYLIC_PRICES: Record<string, number> = {
-  "single-nobox": 900,
-  "dual-nobox": 1000,
-  "single-box": 1200,
-  "dual-box": 1300,
+  "single": 950,
+  "dual": 1200,
 };
 
 // ─── Name Boards constants ─────────────────────────────────────────────────────
