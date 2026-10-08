@@ -12,7 +12,7 @@ export function ContactPage() {
   function upd(f: keyof typeof form, v: string) { setForm((s) => ({ ...s, [f]: v })); }
 
   const CONTACT_CARDS = [
-    { icon: Phone,  label: "Phone",         lines: ["+94 76 430 4439", "+94 70 335 5548"], href: "tel:+94764304439" },
+    { icon: Phone,  label: "Phone",         lines: ["+94 71 430 4439", "+94 76 430 4439"], href: "tel:+94714304439" },
     { icon: Mail,   label: "Email",          lines: ["cre8den@gmail.com"],                  href: "mailto:cre8den@gmail.com" },
     { icon: MapPin, label: "Location",       lines: ["Angunawala, Peradeniya,", "Sri Lanka"], href: "https://maps.app.goo.gl/RdKp8PBNsR67DWkB8?g_st=ic" },
     { icon: Clock,  label: "Working Hours",  lines: ["Mon – Sat: 9 AM – 7 PM", "Sunday: 10 AM – 4 PM"] },

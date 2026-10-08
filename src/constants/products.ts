@@ -2,7 +2,7 @@ import { Zap, Gift, User, Scissors, Cpu, Leaf } from "lucide-react";
 import type { KeyTagConfig } from "@/types";
 import { getImagesForFolder, getFirstImageForFolder } from "@/lib/images";
 
-export const WA_NUMBER = "94764304439";
+export const WA_NUMBER = "94714304439";
 
 export const SVC_OPTIONS = [
   { icon: Zap, label: "Laser Engraving", desc: "Engrave names, logos, or artwork on any material" },

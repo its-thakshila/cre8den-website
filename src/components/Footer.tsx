@@ -77,8 +77,8 @@ export function Footer() {
           <div>
             <p className="text-[10px] font-semibold text-white/30 uppercase tracking-widest mb-5">Contact Us</p>
             <div className="space-y-3.5">
+              <a href="tel:+94714304439" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors"><Phone size={13} className="text-primary flex-shrink-0" />+94 71 430 4439</a>
               <a href="tel:+94764304439" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors"><Phone size={13} className="text-primary flex-shrink-0" />+94 76 430 4439</a>
-              <a href="tel:+94703355548" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors"><Phone size={13} className="text-primary flex-shrink-0" />+94 70 335 5548</a>
               <a href="mailto:cre8den@gmail.com" className="flex items-center gap-3 text-sm text-white/50 hover:text-white transition-colors"><Mail size={13} className="text-primary flex-shrink-0" />cre8den@gmail.com</a>
               <p className="flex items-start gap-3 text-sm text-white/50"><MapPin size={13} className="text-primary flex-shrink-0 mt-0.5" />Angunawala, Peradeniya,<br />Sri Lanka</p>
             </div>

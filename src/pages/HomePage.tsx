@@ -173,7 +173,7 @@ export function HomePage() {
               </div>
             </div>
             <div className="mt-8 pt-6 border-t border-white/10 grid grid-cols-2 gap-4 text-xs text-white/50">
-              <div><p className="text-white/30 mb-1.5 uppercase tracking-wider text-[10px]">Call Us</p><p>+94 76 430 4439</p><p>+94 70 335 5548</p></div>
+              <div><p className="text-white/30 mb-1.5 uppercase tracking-wider text-[10px]">Call Us</p><p>+94 71 430 4439</p><p>+94 76 430 4439</p></div>
               <div><p className="text-white/30 mb-1.5 uppercase tracking-wider text-[10px]">Email</p><p>cre8den@gmail.com</p></div>
             </div>
           </div>
